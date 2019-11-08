@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Интернет-магазин товаров для дома Мишка</title>
+</head>
+<body>
+<header class="page-header">
+  <a class="page-header__logo" aria-label="Перейти на главную страницу">
+    <img src="https://via.placeholder.com/86x35" width="86" height="35" alt="Логотип магазина Мишка">
+  </a>
+  <nav class="page-header__nav">
+    <button class="page-header__button" type="button"></button>
+    <ul class="page-header__menu menu">
+      <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
+      <li class="menu__item"><a href="form.html" class="menu__link">Вязание на заказ</a></li>
+      <li class="menu__item"><a href="" class="menu__link">Поиск по сайту</a></li>
+      <li class="menu__item"><a href="" class="menu__link">Корзина: пока пуста</a></li>
+    </ul>
+  </nav>
+  <div class="page-header__intro">
+    <h1 class="page-title">Милые штуки ручной работы для дома</h1>
+  </div>
+</header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<main>
+  <ul class="categories-list">
+    <li class="categories-list__item"><a href="" class="categories-list__link">Предметы интерьера</a></li>
+    <li class="categories-list__item"><a href="" class="categories-list__link">Детские игрушки</a></li>
+  </ul>
 
-  </body>
+  <article class="special-offer">
+    <header class="special-offer__header">
+      <h2 class="special-offer__title">Вязаные корзинки</h2>
+      <b class="special-offer__name">Товар недели</b>
+    </header>
+    <p class="special-offer__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех
+      размерах.</p>
+    <table class="special-offer__properties">
+      <tbody>
+      <tr class="special-offer__row">
+        <td class="special-offer__key">Цвет:</td>
+        <td class="special-offer__value">«Тиффани»/серый</td>
+      </tr>
+      <tr class="special-offer__row">
+        <td class="special-offer__key">Диаметр:</td>
+        <td class="special-offer__value">25 см</td>
+      </tr>
+      <tr class="special-offer__row">
+        <td class="special-offer__key">Высота:</td>
+        <td class="special-offer__value">15 см</td>
+      </tr>
+      </tbody>
+    </table>
+    <img class="special-offer__photo" src="https://via.placeholder.com/260x315" width="260" height="315" alt="Вязаные корзинки">
+    <footer class="special-offer__footer">
+      <b class="special-offer__price">Цена: 990 руб.</b>
+      <a href="" class="special-offer__button button">Заказать</a>
+    </footer>
+  </article>
+  <section class="features">
+    <h2 class="features__title">Коротко о нас:</h2>
+    <ul class="features__list">
+      <li class="features__item">Экологически чистые материалы</li>
+      <li class="features__item">Скандинавский стиль по российской цене</li>
+      <li class="features__item">Увеличивает лайки на фотографиях</li>
+      <li class="features__item">Связано вручную с любовью и умилением</li>
+      <li class="features__item">Поддержка отечественного производителя</li>
+      <li class="features__item">Поставляется в подарочной упаковке</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="page-footer">
+  <ul class="page-footer__socials-list socials-list">
+    <li class="socials-list__item"><a href="" aria-label="Мишка в Инстаграме"></a></li>
+    <li class="socials-list__item"><a href="" aria-label="Мишка на Фэйсбуке"></a></li>
+    <li class="socials-list__item"><a href="" aria-label="Мишка в Твиттере"></a></li>
+  </ul>
+  <p class="page-footer__copyright">Разработано
+    <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="Перейти на сайт HTML-академии">
+      <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="35" alt="Логотип HTML-академии">
+    </a>
+  </p>
+</footer>
+</body>
 </html>
