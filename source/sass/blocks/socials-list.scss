@@ -1,0 +1,13 @@
+.socials-list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials-list__item {
+  margin-right: 35px;
+  margin-bottom: 20px;
+  width: 22px;
+  height: 22px;
+}

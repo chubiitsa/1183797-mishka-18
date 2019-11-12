@@ -1,0 +1,37 @@
+.catalog-item__info {
+  padding: 28px;
+  border: 1px solid $border-color;
+}
+
+.catalog-item__content {
+  border-bottom: $border;
+  padding-bottom: 28px;
+}
+
+.catalog-item__name {
+  margin: 0;
+}
+
+.catalog-item__link {
+  @include font-set($font-size, 20px, bold, $black);
+}
+
+.catalog-item__description {
+  @include font-set(13px, 30px);
+  margin: 0;
+}
+
+.catalog-item__price {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.catalog-item__buy {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.catalog-item__footer {
+  padding-top: 28px;
+}

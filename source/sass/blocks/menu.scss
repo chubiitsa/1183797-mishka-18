@@ -1,0 +1,15 @@
+.menu {
+  @include list-style;
+  border-top: $border;
+}
+
+.menu__item {
+  border-bottom: $border;
+}
+
+.menu__link {
+  @include font-set($font-size, 24px, bold, $black);
+  display: block;
+  padding: 30px;
+  padding-left: 60px;
+}

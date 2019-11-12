@@ -1,0 +1,21 @@
+.page-footer {
+  background-color: $bg-color;
+  margin-top: 30px;
+  padding: 20px 30px;
+}
+
+.page-footer__copyright {
+  @include font-set(19px, 24px, bold, $black);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.copyright__link {
+  line-height: 0;
+  margin: 0 25px;
+}

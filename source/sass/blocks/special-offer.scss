@@ -1,0 +1,42 @@
+.special-offer {
+  padding: 20px 30px;
+}
+
+.special-offer__title {
+  @include big-title;
+}
+
+.special-offer__name {
+  line-height: 20px;
+  color: $primary-color;
+  text-transform: uppercase;
+}
+
+.special-offer__description {
+  @include font-set(15px, 24px);
+  margin: 0 0 20px;
+}
+
+.special-offer__properties {
+  @include font-set(15px, 20px);
+  margin: 0 0 30px;
+  border-collapse: collapse;
+}
+
+.special-offer__photo {
+  margin-bottom: 20px;
+}
+
+.special-offer__price {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.special-offer__key {
+  border-bottom: $border;
+}
+
+.special-offer__value {
+  border-bottom: $border;
+}

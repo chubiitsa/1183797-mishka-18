@@ -1,0 +1,85 @@
+.feedback {
+  padding: 20px 30px;
+}
+
+.feedback__title {
+  @include big-title;
+}
+
+.feedback__item {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__text {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.feedback__author {
+  font-style: normal;
+}
+
+.feedback__author-name {
+  color: $black;
+}
+
+.feedback__controls {
+  margin: 25px 0;
+}
+
+.feedback__controls-btn {
+  position: relative;
+  margin: 0;
+  border: $border;
+  background-color: white;
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.feedback__arrow {
+  width: 45px;
+  height: 4px;
+  background-color: $black;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background-color: $black;
+  }
+}
+
+.feedback__arrow--prev {
+  &::before {
+    top: -5px;
+    left: -5px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: 5px;
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+.feedback__arrow--next {
+  &::before {
+    top: -5px;
+    right: -5px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    top: 5px;
+    right: -5px;
+    transform: rotate(-45deg);
+  }
+}
