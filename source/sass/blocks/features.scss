@@ -1,0 +1,50 @@
+.features {
+  padding: 20px 30px;
+  color: $black;
+}
+
+.features__title {
+  @include big-title;
+}
+
+.features__list {
+  @include list-style;
+}
+
+.features__item {
+  @include font-set($font-size, 20px, bold, $black);
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+
+  &--flower {
+    background-image: url("../img/icon-feature-flower.svg");
+    background-size: 40px;
+  }
+
+  &--money {
+    background-image: url("../img/icon-feature-money.svg");
+    background-size: 40px;
+  }
+
+  &--heart {
+    background-image: url("../img/icon-feature-heart.svg");
+    background-size: 40px;
+  }
+
+  &--ball {
+    background-image: url("../img/icon-feature-ball.svg");
+    background-size: 40px;
+  }
+
+  &--rocket {
+    background-image: url("../img/icon-feature-rocket.svg");
+    background-size: 50px;
+  }
+
+  &--gift {
+    background-image: url("../img/icon-feature-gift.svg");
+    background-size: 40px;
+  }
+}

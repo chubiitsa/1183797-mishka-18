@@ -1,0 +1,67 @@
+.page-header__logo {
+  width: 86px;
+  height: 35px;
+}
+
+.page-header__intro {
+  padding: 30px 30px;
+  width: 320px;
+
+  &--main {
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--inner {
+    background-color: $bg-color;
+  }
+}
+
+.page-title {
+  @include font-set(27px, 30px, bold, $black);
+  margin: 45px 0;
+  text-align: center;
+}
+
+.page-header__button {
+  position: relative;
+  margin: 0;
+  border: none;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.page-header__button-icon {
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $black;
+    transform: translateY(5px);
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $black;
+    transform: translateY(-7px);
+  }
+}

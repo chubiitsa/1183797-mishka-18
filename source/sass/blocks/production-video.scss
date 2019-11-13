@@ -1,0 +1,15 @@
+.production-video {
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  border-top: $border;
+  border-bottom: $border;
+}
+
+.production-video__title {
+  @include font-set($font-size, 24px, bold, $black);
+  margin: 10px 0;
+}
+
+.production-video__description {
+  @include font-set(13px, 24px);
+}

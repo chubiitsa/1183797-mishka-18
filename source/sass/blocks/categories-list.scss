@@ -1,0 +1,19 @@
+.categories-list {
+  @include list-style;
+}
+
+.categories-list__item {
+  padding: 20px 30px;
+
+  &--left {
+    background-color: $primary-color;
+  }
+
+  &--right {
+    background-color: $secondary-color;
+  }
+}
+
+.categories-list__link {
+  @include font-set(19px, 24px, bold, $white);
+}
