@@ -36,50 +36,35 @@
   width: 130px;
   height: 50px;
   cursor: pointer;
-}
 
-.feedback__arrow {
-  width: 45px;
-  height: 4px;
-  background-color: $black;
-  position: absolute;
-  top: 50%;
-  left: 35%;
-
-  &::before,
   &::after {
     content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid $black;
     position: absolute;
-    width: 40%;
+    top: 40%;
+  }
+
+  &::before {
+    content: "";
+    width: 45px;
     height: 4px;
     background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: 35%;
   }
 }
 
-.feedback__arrow--prev {
-  &::before {
-    top: -5px;
-    left: -5px;
-    transform: rotate(-45deg);
-  }
-
-  &::after {
-    top: 5px;
-    left: -5px;
-    transform: rotate(45deg);
-  }
+.feedback__controls-btn--prev::after {
+  border-left: 4px solid $black;
+  transform: rotate(-45deg);
+  left: 35%;
 }
 
-.feedback__arrow--next {
-  &::before {
-    top: -5px;
-    right: -5px;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    top: 5px;
-    right: -5px;
-    transform: rotate(-45deg);
-  }
+.feedback__controls-btn--next::after {
+  border-right: 4px solid $black;
+  transform: rotate(45deg);
+  right: 30%;
 }
