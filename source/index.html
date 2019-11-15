@@ -7,33 +7,42 @@
 </head>
 <body>
 <header class="page-header">
-  <a class="page-header__logo" aria-label="Перейти на главную страницу">
-    <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-  </a>
-  <nav class="page-header__nav">
-    <button class="page-header__button" type="button">
-      <div class="page-header__button-icon"></div>
-    </button>
-    <ul class="page-header__menu menu">
-      <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
-      <li class="menu__item"><a href="form.html" class="menu__link">Вязание на заказ</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Поиск по сайту</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Корзина: пока пуста</a></li>
-    </ul>
-  </nav>
-  <div class="page-header__intro page-header__intro--main">
-    <h1 class="page-title">Милые штуки ручной работы для дома</h1>
+  <div class="page-header__wrapper">
+    <nav class="page-header__nav">
+      <button class="page-header__button" type="button">
+        <div class="page-header__button-icon"></div>
+      </button>
+      <ul class="page-header__menu menu">
+        <li class="menu__item menu__item--logo">
+          <a class="page-header__logo" aria-label="Перейти на главную страницу">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          </a>
+        </li>
+        <li class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
+        <li class="menu__item menu__item--knitting"><a href="form.html" class="menu__link">Вязание на заказ</a></li>
+        <li class="menu__item menu__item--search"><a href="" class="menu__link"></a></li>
+        <li class="menu__item menu__item--cart"><a href="" class="menu__link menu__link--cart">Корзина: пока пуста</a></li>
+        <li class="menu__item menu__item--arrivals"><a href="" class="menu__link menu__link--arrivals">Новые поступления</a></li>
+        <li class="menu__item menu__item--sale"><a href="" class="menu__link menu__link--sale">Распродажа</a></li>
+      </ul>
+    </nav>
   </div>
+    <div class="page-header__intro page-header__intro--main">
+      <p class="page-header__text">Бесплатная доставка по России</p>
+      <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
+    </div>
 </header>
 
 <main>
+  <div class="categories-list__wrapper">
   <ul class="categories-list">
     <li class="categories-list__item categories-list__item--left"><a href="" class="categories-list__link">Предметы
       интерьера</a></li>
     <li class="categories-list__item categories-list__item--right"><a href="" class="categories-list__link">Детские
       игрушки</a></li>
+  </div>
   </ul>
-
+  <div class="site-wrapper">
   <article class="special-offer">
     <header class="special-offer__header">
       <h2 class="special-offer__title">Вязаные корзинки</h2>
@@ -114,7 +123,7 @@
     <a class="contacts__button button" href="">Напишите нам</a>
   </section>
 </main>
-
+</div>
 <footer class="page-footer">
   <ul class="page-footer__socials-list socials-list">
     <li class="socials-list__item socials-list__item--insta">

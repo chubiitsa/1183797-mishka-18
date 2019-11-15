@@ -17,3 +17,21 @@
 .categories-list__link {
   @include font-set(19px, 24px, bold, $white);
 }
+
+@media (min-width: $tablet-width) {
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -65px;
+  }
+
+  .categories-list__item {
+    min-width: 334px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-list__item {
+    min-width: 525px;
+  }
+}

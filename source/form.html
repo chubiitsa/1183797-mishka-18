@@ -8,24 +8,32 @@
 <body>
 
 <header class="page-header">
-  <a href="index.html" class="page-header__logo" aria-label="Перейти на главную страницу">
-    <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
-  </a>
-  <nav class="page-header__nav">
-    <button class="page-header__button" type="button"></button>
-    <ul class="page-header__menu menu">
-      <li class="menu__item"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
-      <li class="menu__item"><a class="menu__link">Вязание на заказ</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Поиск по сайту</a></li>
-      <li class="menu__item"><a href="" class="menu__link">Корзина: пока пуста</a></li>
-    </ul>
-  </nav>
+  <div class="page-header__wrapper">
+    <nav class="page-header__nav">
+      <button class="page-header__button" type="button"></button>
+      <ul class="page-header__menu menu">
+        <li class="menu__item menu__item--logo">
+          <a href="index.html" class="page-header__logo" aria-label="Перейти на главную страницу">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          </a>
+        </li>
+        <li class="menu__item menu__item--catalog"><a href="catalog.html" class="menu__link">Каталог товаров</a></li>
+        <li class="menu__item menu__item--knitting"><a href="form.html" class="menu__link">Вязание на заказ</a></li>
+        <li class="menu__item menu__item--search"><a href="" class="menu__link"></a></li>
+        <li class="menu__item menu__item--cart"><a href="" class="menu__link menu__link--cart">Корзина: пока пуста</a></li>
+        <li class="menu__item menu__item--arrivals"><a href="" class="menu__link menu__link--arrivals">Новые поступления</a></li>
+        <li class="menu__item menu__item--sale"><a href="" class="menu__link menu__link--sale">Распродажа</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="page-header__intro page-header__intro--inner">
-    <h1 class="page-title">Вязание на заказ</h1>
+    <p class="page-header__text">Бесплатная доставка по России</p>
+    <h1 class="page-header__title">Вязание на заказ</h1>
   </div>
 </header>
 
 <main>
+  <div class="site-wrapper">
   <p class="page-description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
     свяжемся с вами, чтобы уточнить детали.
   </p>
@@ -78,7 +86,7 @@
       <button class="order-form__button button" type="submit">Отправить заказ</button>
     </div>
   </form>
-
+  </div>
 </main>
 
 <footer class="page-footer">

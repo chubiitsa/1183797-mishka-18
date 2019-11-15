@@ -26,3 +26,42 @@ body {
 a {
   text-decoration: none;
 }
+
+main {
+  width: auto;
+  margin: 0;
+}
+
+.site-wrapper {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.categories-list__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .site-wrapper {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .categories-list__wrapper {
+    width: 668px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-wrapper {
+    width: 1050px;
+    margin: 0 auto;
+  }
+
+  .categories-list__wrapper {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
