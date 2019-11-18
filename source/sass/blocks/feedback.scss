@@ -1,9 +1,9 @@
-.feedback {
-  padding: 20px 0;
-}
-
 .feedback__title {
   @include big-title;
+}
+
+.feedback__photo {
+  display: none;
 }
 
 .feedback__item {
@@ -33,38 +33,129 @@
   margin: 0;
   border: $border;
   background-color: white;
-  width: 130px;
+  width: 92px;
   height: 50px;
   cursor: pointer;
 
   &::after {
     content: "";
-    width: 15px;
-    height: 15px;
-    border-top: 4px solid $black;
+    width: 19px;
+    height: 19px;
+    border-top: 5px solid $black;
     position: absolute;
-    top: 40%;
+    top: 43%;
   }
 
   &::before {
     content: "";
-    width: 45px;
-    height: 4px;
+    width: 48px;
+    height: 5px;
     background-color: $black;
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 55%;
+    left: 16px;
   }
 }
 
 .feedback__controls-btn--prev::after {
-  border-left: 4px solid $black;
+  border-left: 5px solid $black;
   transform: rotate(-45deg);
-  left: 35%;
+  left: 17px;
 }
 
 .feedback__controls-btn--next::after {
-  border-right: 4px solid $black;
+  border-right: 5px solid $black;
   transform: rotate(45deg);
-  right: 30%;
+  right: 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .feedback__container {
+    margin-top: 23px;
+    padding-top: 78px;
+    padding-bottom: 55px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback__photo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .feedback__title {
+    @include font-set(43px, 50px, bold, $black);
+    margin: 0 0 30px;
+    order: -2;
+  }
+
+  .feedback__text {
+    @include font-set(17px, 30px);
+    margin-bottom: 58px;
+    flex-basis: 100%;
+  }
+
+  .feedback__author-name {
+    display: block;
+    font-size: 18px;
+  }
+
+  .feedback__button {
+    width: 175px;
+    order: -1;
+    margin-left: auto;
+    margin-bottom: auto;
+  }
+
+  .feedback__controls {
+    position: absolute;
+    bottom: 55px;
+    right: 50px;
+    margin: 0;
+  }
+
+  .feedback__controls-btn {
+    border: none;
+    width: 85px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__container {
+    margin-top: 0;
+    padding-top: 68px;
+    padding-left: 220px;
+    padding-bottom: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback__title {
+    @include font-set(53px, 57px, bold, $black);
+  }
+
+  .feedback__photo {
+    left: 50px;
+  }
+
+  .feedback__wrapper {
+    margin-left: 5px;
+  }
+
+  .feedback__text {
+    margin-bottom: 40px;
+  }
+
+  .feedback__controls {
+    bottom: 100px;
+  }
+
+  .feedback__button {
+    margin-top: 8px;
+  }
 }

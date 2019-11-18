@@ -1,9 +1,15 @@
-.special-offer {
-  padding: 20px 0;
+.special-offer__container {
+  padding-bottom: 30px;
+}
+
+.special-offer__header {
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .special-offer__title {
   @include big-title;
+  margin: 0 0 5px;
 }
 
 .special-offer__name {
@@ -14,13 +20,17 @@
 
 .special-offer__description {
   @include font-set(15px, 24px);
-  margin: 0 0 20px;
+  margin: 3px 0 26px;
+  width: 100%;
+  min-width: 260px;
+  max-width: $tablet-width;
 }
 
 .special-offer__properties {
   @include font-set(15px, 20px);
   margin: 0 0 30px;
   border-collapse: collapse;
+  width: 100%;
 }
 
 .special-offer__photo {
@@ -28,15 +38,123 @@
 }
 
 .special-offer__price {
+  width: 100%;
+  min-width: 260px;
   display: block;
   margin-bottom: 20px;
   text-align: center;
 }
 
+.special-offer__button {
+  width: 100%;
+  min-width: 260px;
+}
+
 .special-offer__key {
+  display: block;
+  padding: 10px 0;
   border-bottom: $border;
 }
 
 .special-offer__value {
   border-bottom: $border;
+}
+
+@media (min-width: $tablet-width) {
+  .special-offer__container {
+    margin-top: 55px;
+    padding-bottom: 80px;
+    position: relative;
+  }
+
+  .special-offer__header {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .special-offer__title {
+    @include font-set(43px, 50px, bold, $black);
+  }
+
+  .special-offer__name {
+    width: 100px;
+    text-align: center;
+    line-height: 18px;
+    margin-right: 13px;
+  }
+
+  .special-offer__info {
+    margin-top: 45px;
+    padding-right: 56.5%;
+  }
+
+  .special-offer__description {
+    @include font-set(17px, 30px);
+    margin: 0 0 35px;
+  }
+
+  .special-offer__footer {
+    margin-top: 55px;
+    padding-right: 56.5%;
+  }
+
+  .special-offer__price {
+    font-size: 20px;
+    margin-bottom: 33px;
+  }
+
+  .special-offer__photo {
+    position: absolute;
+    top: 108px;
+    right: 50px;
+    width: 334px;
+    height: 404px;
+    order: 5;
+    align-self: end;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .special-offer__container {
+    margin-top: 74px;
+  }
+
+  .special-offer__header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding: 60px 0 0 0;
+  }
+
+  .special-offer__name {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .special-offer__info {
+    margin-left: 175px;
+  }
+
+  .special-offer__description {
+    margin-bottom: 45px;
+  }
+
+  .special-offer__footer {
+    margin-left: 175px;
+    margin-top: 110px;
+    padding-right: 55.5%;
+  }
+
+  .special-offer__title {
+    @include font-set(53px, 57px, bold, $black);
+  }
+
+  .special-offer__photo {
+    width: 525px;
+    height: 636px;
+    top: 8px;
+    z-index: -1;
+  }
 }

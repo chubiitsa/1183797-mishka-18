@@ -3,5 +3,29 @@
 }
 
 .catalog-list__item {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-list__item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog-list__item {
+    margin-left: 0;
+    margin-right: 50px;
+    width: 315px;
+  }
+
+  .catalog-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
 }

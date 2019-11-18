@@ -1,5 +1,5 @@
 .contacts {
-  padding: 20px 0;
+  @include wrapper;
 }
 
 .contacts__title {
@@ -15,4 +15,8 @@
 .contacts__email {
   color: $dark-grey;
   text-decoration: underline $primary-color;
+}
+
+.contacts__map {
+  overflow: hidden;
 }

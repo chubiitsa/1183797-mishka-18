@@ -1,7 +1,7 @@
 .page-footer {
   background-color: $bg-color;
   margin-top: 30px;
-  padding: 20px 30px;
+  padding: 10px 30px 20px;
 }
 
 .page-footer__copyright {
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 10px 0 0;
   padding: 10px;
   border-top: 1px solid #e5e5e5;
 }
@@ -18,4 +18,34 @@
 .copyright__link {
   line-height: 0;
   margin: 0 25px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 55px;
+    padding: 50px;
+  }
+
+  .page-footer__logo {
+    display: block;
+    margin-right: 115px;
+  }
+
+  .page-footer__copyright {
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  .copyright__link {
+    margin-right: 0;
+  }
 }
