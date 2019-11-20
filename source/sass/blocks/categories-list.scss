@@ -1,9 +1,13 @@
 .categories-list {
-  @include list-style;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .categories-list__item {
-  padding: 20px 30px;
+  position: relative;
 
   &--left {
     background-color: $primary-color;
@@ -14,6 +18,37 @@
   }
 }
 
+.categories-list__icon {
+  position: absolute;
+  top: 25%;
+  right: 30px;
+}
+
+.categories-list__icon g {
+  opacity: 0.5;
+}
+
 .categories-list__link {
   @include font-set(19px, 24px, bold, $white);
+  display: block;
+  padding: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -118px;
+    padding: 0 50px;
+  }
+
+  .categories-list__item {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .categories-list__item {
+    min-width: 50%;
+  }
 }

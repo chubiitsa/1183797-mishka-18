@@ -1,15 +1,161 @@
 .menu {
   @include list-style;
-  border-top: $border;
 }
 
 .menu__item {
   border-bottom: $border;
 }
 
+.menu__item--logo {
+  text-align: center;
+  padding-bottom: 19px;
+  padding-top: 21px;
+}
+
+/* .menu__item--knitting,
+.menu__item--catalog,
+.menu__item--search,
+.menu__item--cart {
+  display: none;
+}
+*/
+
+.menu__item--arrivals {
+  display: none;
+}
+
+.menu__item--sale {
+  display: none;
+}
+
 .menu__link {
   @include font-set($font-size, 24px, bold, $black);
+  position: relative;
   display: block;
-  padding: 30px;
-  padding-left: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 0;
+  padding-left: 75px;
+}
+
+.menu__icon {
+  position: absolute;
+  top: 40%;
+  left: 12%;
+  width: 20px;
+  height: 20px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .menu {
+    min-width: 668px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .menu__item--knitting,
+  .menu__item--catalog,
+  .menu__item--search,
+  .menu__item--cart {
+    display: block;
+  }
+
+  .menu__link--hidden {
+    display: none;
+  }
+
+  .menu__item {
+    border: none;
+  }
+
+  .menu__link {
+    padding-left: 0;
+  }
+
+  .menu__link--catalog,
+  .menu__link--knitting {
+    @include font-set(15px, 24px, bold, $black);
+    padding-top: 15px;
+  }
+
+  .menu__link--cart {
+    padding-left: 83px;
+  }
+
+  .menu__item--logo {
+    min-width: 320px;
+    text-align: left;
+  }
+
+  .menu__item--catalog {
+    min-width: 167px;
+    order: 2;
+  }
+
+  .menu__item--cart {
+    width: 266px;
+    border-left: $border;
+  }
+
+  .menu__item--knitting {
+    min-width: 167px;
+    order: 3;
+  }
+
+  .menu__item--search {
+    width: 82px;
+    border-left: $border;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    min-width: 1050px;
+  }
+
+  .menu__link--catalog,
+  .menu__link--knitting {
+    @include font-set($font-size, 24px, bold, $black);
+    padding-top: 30px;
+  }
+
+  .menu__item--logo {
+    min-width: 317px;
+    order: -1;
+    text-align: center;
+  }
+
+  .menu__item--catalog {
+    border-right: $border;
+    min-width: 185px;
+    order: -3;
+  }
+
+  .menu__item--knitting {
+    min-width: 200px;
+    padding-left: 35px;
+    order: -2;
+  }
+
+  .menu__item--search {
+    border-left: $border;
+  }
+
+  .menu__item--arrivals,
+  .menu__item--sale {
+    min-width: 185px;
+    display: block;
+  }
+
+  .menu__link--arrivals,
+  .menu__link--sale {
+    @include font-set(15px, 24px, bold, $black);
+    padding-top: 15px;
+  }
+
+  .menu__link--sale {
+    padding-left: 35px;
+  }
 }

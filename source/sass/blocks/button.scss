@@ -1,8 +1,8 @@
 .button {
   @include font-set($font-size, 20px, bold);
   display: block;
-  margin: 10px 0;
-  padding: 15px;
+  margin: 0;
+  padding: 14px;
   border: 2px solid $dark-grey;
   text-transform: uppercase;
   background-color: transparent;

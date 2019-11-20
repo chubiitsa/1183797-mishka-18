@@ -1,13 +1,31 @@
+.page-header {
+  width: auto;
+  margin: 0;
+}
+
+.page-header__nav {
+  @include wrapper;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+
 .page-header__logo {
   width: 86px;
   height: 35px;
 }
 
+.page-header__logo img {
+  width: 113px;
+  height: 46px;
+}
+
 .page-header__intro {
-  padding: 30px 30px;
-  width: 320px;
+  padding: 30px 0;
+  min-height: 281px;
 
   &--main {
+    background-color: #f9f9f9;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,14 +37,22 @@
   }
 }
 
-.page-title {
+.page-header__text {
+  @include font-set(15px, 24px);
+  display: none;
+}
+
+.page-header__title {
   @include font-set(27px, 30px, bold, $black);
-  margin: 45px 0;
+  @include wrapper;
   text-align: center;
+  margin-top: 38px;
 }
 
 .page-header__button {
-  position: relative;
+  position: absolute;
+  top: 28px;
+  right: 31px;
   margin: 0;
   border: none;
   background-color: white;
@@ -63,5 +89,51 @@
     left: 0;
     content: "";
     transform: translateY(-7px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__nav {
+    @include wrapper;
+  }
+
+  .page-header__text {
+    max-width: 1150px;
+    display: block;
+    text-align: right;
+    margin: -13px auto;
+    padding-right: 50px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+
+  .page-header__intro {
+    border-top: $border;
+    margin-top: -72px;
+    padding: 30px 0;
+    min-height: 745px;
+  }
+
+  .page-header__intro--inner {
+    min-height: 228px;
+  }
+
+  .page-header__title {
+    @include font-set(43px, 50px, bold, $black);
+    @include wrapper;
+    margin-top: 124px;
+  }
+
+  .page-header__title--inner {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__title {
+    @include font-set(53px, 57px, bold, $black);
+    @include wrapper;
   }
 }

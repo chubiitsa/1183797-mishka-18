@@ -18,3 +18,16 @@
   font-weight: $weight;
   color: $color;
 }
+
+@mixin wrapper() {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 100%;
+  max-width: $desktop-width;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 50px;
+  }
+}
