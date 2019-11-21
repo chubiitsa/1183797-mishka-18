@@ -1,11 +1,11 @@
 .catalog-item__info {
-  padding: 28px;
+  padding: 26px;
   border: 1px solid $border-color;
   background-color: white;
 }
 
 .catalog-item__content {
-  padding-bottom: 28px;
+  padding-bottom: 16px;
 }
 
 .catalog-item__name {
@@ -37,7 +37,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   border-top: $border;
-  padding-top: 28px;
+  padding-top: 21px;
 }
 
 .catalog-item__photo {
@@ -78,8 +78,20 @@
     width: 315px;
   }
 
+  .catalog-item__name {
+    margin-bottom: 5px;
+  }
+
   .catalog-item__photo {
     width: 315px;
     height: 460px;
+  }
+
+  .catalog-item__link {
+    font-size: 20px;
+  }
+
+  .catalog-item__description {
+    font-size: 15px;
   }
 }

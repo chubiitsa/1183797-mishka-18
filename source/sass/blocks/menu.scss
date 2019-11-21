@@ -108,6 +108,13 @@
     width: 82px;
     border-left: $border;
   }
+
+  .menu__icon--search {
+    top: 60%;
+    left: 41%;
+    width: 18px;
+    height: 18px;
+  }
 }
 
 @media (min-width: $desktop-width) {

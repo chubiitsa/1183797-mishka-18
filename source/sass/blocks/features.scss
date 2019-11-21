@@ -52,11 +52,11 @@
 
   .features__title {
     @include font-set(43px, 50px, bold, $black);
-    margin: 41px 0 52px;
+    margin: 37px 0 52px;
   }
 
   .features__item {
-    @include font-set(20px, 21px, bold, $black);
+    @include font-set(20px, 22px, bold, $black);
     width: 334px;
     padding-bottom: 62px;
     padding-right: 20px;
@@ -81,7 +81,7 @@
 
 @media (min-width: $desktop-width) {
   .features__container {
-    padding: 35px 222px;
+    padding: 35px 225px 30px;
   }
 
   .features__title {

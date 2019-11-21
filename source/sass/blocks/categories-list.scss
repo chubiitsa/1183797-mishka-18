@@ -31,7 +31,7 @@
 .categories-list__link {
   @include font-set(19px, 24px, bold, $white);
   display: block;
-  padding: 30px;
+  padding: 30px 30px 40px;
 }
 
 @media (min-width: $tablet-width) {

@@ -43,7 +43,7 @@
     height: 19px;
     border-top: 5px solid $black;
     position: absolute;
-    top: 43%;
+    top: 16px;
   }
 
   &::before {
@@ -52,8 +52,8 @@
     height: 5px;
     background-color: $black;
     position: absolute;
-    top: 55%;
-    left: 16px;
+    top: 23px;
+    left: 17px;
   }
 }
 
@@ -71,12 +71,16 @@
 
 @media (min-width: $tablet-width) {
   .feedback__container {
-    margin-top: 23px;
+    margin-top: 21px;
     padding-top: 78px;
     padding-bottom: 55px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    background-image: url("../../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
   }
 
   .feedback__photo {
@@ -113,7 +117,7 @@
 
   .feedback__controls {
     position: absolute;
-    bottom: 55px;
+    bottom: 50px;
     right: 50px;
     margin: 0;
   }
@@ -133,10 +137,12 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    background-position: 50px;
   }
 
   .feedback__title {
     @include font-set(53px, 57px, bold, $black);
+    margin-bottom: 32px;
   }
 
   .feedback__photo {
@@ -152,10 +158,10 @@
   }
 
   .feedback__controls {
-    bottom: 100px;
+    bottom: 96px;
   }
 
   .feedback__button {
-    margin-top: 8px;
+    margin-top: 10px;
   }
 }
