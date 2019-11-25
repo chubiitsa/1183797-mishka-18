@@ -5,7 +5,6 @@
 }
 
 @mixin big-title {
-  margin: 10px 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: bold;
@@ -17,6 +16,10 @@
   line-height: $line-height;
   font-weight: $weight;
   color: $color;
+}
+
+@mixin shadow {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 @mixin wrapper() {

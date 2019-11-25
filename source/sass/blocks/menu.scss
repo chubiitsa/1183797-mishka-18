@@ -1,5 +1,63 @@
-.menu {
+.menu__list {
   @include list-style;
+}
+
+.menu__logo {
+  width: 86px;
+  height: 35px;
+}
+
+.menu__logo[href] {
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu__toggle {
+  position: absolute;
+  top: 28px;
+  right: 31px;
+  margin: 0;
+  border: none;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu__toggle-icon {
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  &::before {
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    transform: translateY(5px);
+  }
+
+  &::after {
+    width: 20px;
+    height: 2px;
+    background-color: $black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    content: "";
+    transform: translateY(-7px);
+  }
 }
 
 .menu__item {
@@ -12,18 +70,7 @@
   padding-top: 21px;
 }
 
-/* .menu__item--knitting,
-.menu__item--catalog,
-.menu__item--search,
-.menu__item--cart {
-  display: none;
-}
-*/
-
-.menu__item--arrivals {
-  display: none;
-}
-
+.menu__item--arrivals,
 .menu__item--sale {
   display: none;
 }
@@ -32,10 +79,21 @@
   @include font-set($font-size, 24px, bold, $black);
   position: relative;
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 0;
-  padding-left: 75px;
+  padding: 30px 0 30px 75px;
+}
+
+.menu__link[href] {
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu__link[href]:focus .menu__icon {
+  fill: $primary-color;
 }
 
 .menu__icon {
@@ -44,15 +102,68 @@
   left: 12%;
   width: 20px;
   height: 20px;
+  fill: #cccccc;
 }
 
+@media (max-width: 767px) {
+  .menu .menu__item {
+    display: none;
+
+    &:first-child {
+      display: block;
+    }
+  }
+
+  .menu--nojs .menu__toggle {
+    display: none;
+  }
+
+  .menu--nojs .menu__item,
+  .menu--opened .menu__item {
+    display: block;
+  }
+
+  .menu--nojs .menu__item--sale,
+  .menu--nojs .menu__item--arrivals,
+  .menu--opened .menu__item--sale,
+  .menu--opened .menu__item--arrivals {
+    display: none;
+  }
+
+  .menu--opened .menu__toggle-icon {
+    background-color: transparent;
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
 
 @media (min-width: $tablet-width) {
-  .menu {
+  .menu__list {
     min-width: 668px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+
+  .menu__logo {
+    display: block;
+    width: 113px;
+    height: 46px;
+  }
+
+  .menu__toggle,
+  .menu__link--hidden {
+    display: none;
+  }
+
+  .menu__item {
+    border: none;
   }
 
   .menu__item--knitting,
@@ -62,36 +173,17 @@
     display: block;
   }
 
-  .menu__link--hidden {
-    display: none;
-  }
-
-  .menu__item {
-    border: none;
-  }
-
-  .menu__link {
-    padding-left: 0;
-  }
-
-  .menu__link--catalog,
-  .menu__link--knitting {
-    @include font-set(15px, 24px, bold, $black);
-    padding-top: 15px;
-  }
-
-  .menu__link--cart {
-    padding-left: 83px;
-  }
-
   .menu__item--logo {
     min-width: 320px;
     text-align: left;
+    padding-bottom: 19px;
+    padding-top: 21px;
   }
 
   .menu__item--catalog {
     min-width: 167px;
     order: 2;
+    z-index: 1;
   }
 
   .menu__item--cart {
@@ -102,11 +194,26 @@
   .menu__item--knitting {
     min-width: 167px;
     order: 3;
+    z-index: 1;
   }
 
   .menu__item--search {
     width: 82px;
     border-left: $border;
+  }
+
+  .menu__link {
+    padding-left: 0;
+  }
+
+  .menu__link--catalog,
+  .menu__link--knitting {
+    @include font-set(15px, 24px, bold, $black);
+    padding-top: 20px;
+  }
+
+  .menu__link--cart {
+    padding-left: 83px;
   }
 
   .menu__icon--search {
@@ -118,20 +225,34 @@
 }
 
 @media (min-width: $desktop-width) {
-  .menu {
+  .menu__list {
     min-width: 1050px;
   }
 
-  .menu__link--catalog,
-  .menu__link--knitting {
-    @include font-set($font-size, 24px, bold, $black);
-    padding-top: 30px;
+  .menu__logo {
+    display: block;
+    width: 153px;
+    height: 72px;
+    margin: 0 auto;
+  }
+
+  .menu__logo[href] {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .menu__logo img { /*временно пока нет настоящего логотипа*/
+    width: 153px;
+    height: 72px;
   }
 
   .menu__item--logo {
     min-width: 317px;
     order: -1;
     text-align: center;
+    padding-bottom: 9px;
+    padding-top: 10px;
   }
 
   .menu__item--catalog {
@@ -142,7 +263,6 @@
 
   .menu__item--knitting {
     min-width: 200px;
-    padding-left: 35px;
     order: -2;
   }
 
@@ -154,6 +274,17 @@
   .menu__item--sale {
     min-width: 185px;
     display: block;
+    z-index: 1;
+  }
+
+  .menu__link--catalog,
+  .menu__link--knitting {
+    @include font-set($font-size, 24px, bold, $black);
+    padding-top: 30px;
+  }
+
+  .menu__link--knitting {
+    padding-left: 35px;
   }
 
   .menu__link--arrivals,
@@ -164,5 +295,13 @@
 
   .menu__link--sale {
     padding-left: 35px;
+  }
+
+  .menu__link[href]:hover {
+    opacity: 0.6;
+  }
+
+  .menu__link[href]:hover .menu__icon {
+    fill: $primary-color;
   }
 }

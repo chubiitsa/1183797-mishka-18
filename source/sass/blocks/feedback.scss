@@ -1,5 +1,10 @@
+.feedback__container {
+  margin-bottom: 86px;
+}
+
 .feedback__title {
   @include big-title;
+  margin: 26px 0 25px;
 }
 
 .feedback__photo {
@@ -12,8 +17,8 @@
 }
 
 .feedback__text {
-  font-size: 15px;
-  line-height: 30px;
+  @include font-set(15px, 30px);
+  margin: 0 0 25px;
 }
 
 .feedback__author {
@@ -21,11 +26,13 @@
 }
 
 .feedback__author-name {
+  display: block;
   color: $black;
+  margin-bottom: 6px;
 }
 
 .feedback__controls {
-  margin: 25px 0;
+  margin: 34px 0 35px;
 }
 
 .feedback__controls-btn {
@@ -33,17 +40,17 @@
   margin: 0;
   border: $border;
   background-color: white;
-  width: 92px;
+  width: 130px;
   height: 50px;
   cursor: pointer;
 
   &::after {
     content: "";
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     border-top: 5px solid $black;
     position: absolute;
-    top: 16px;
+    top: 14px;
   }
 
   &::before {
@@ -52,28 +59,46 @@
     height: 5px;
     background-color: $black;
     position: absolute;
-    top: 23px;
-    left: 17px;
+    top: 22px;
+    left: 39px;
   }
+}
+
+.feedback__controls-btn:focus {
+  &::before,
+  &::after {
+    opacity: 0.6;
+  }
+}
+
+.feedback__controls-btn:active {
+  &::before,
+  &::after {
+    opacity: 0.3;
+  }
+}
+
+.feedback__controls-btn--next {
+  margin-left: -5px;
 }
 
 .feedback__controls-btn--prev::after {
   border-left: 5px solid $black;
   transform: rotate(-45deg);
-  left: 17px;
+  left: 40px;
 }
 
 .feedback__controls-btn--next::after {
   border-right: 5px solid $black;
   transform: rotate(45deg);
-  right: 22px;
+  right: 42px;
 }
 
 @media (min-width: $tablet-width) {
   .feedback__container {
-    margin-top: 21px;
-    padding-top: 78px;
-    padding-bottom: 55px;
+    margin-top: 28px;
+    padding-top: 79px;
+    padding-bottom: 28px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -93,7 +118,7 @@
 
   .feedback__title {
     @include font-set(43px, 50px, bold, $black);
-    margin: 0 0 30px;
+    margin: 0 0 30px -5px;
     order: -2;
   }
 
@@ -101,6 +126,10 @@
     @include font-set(17px, 30px);
     margin-bottom: 58px;
     flex-basis: 100%;
+  }
+
+  .feedback__item {
+    margin: 19px 0;
   }
 
   .feedback__author-name {
@@ -117,32 +146,44 @@
 
   .feedback__controls {
     position: absolute;
-    bottom: 50px;
+    bottom: 45px;
     right: 50px;
     margin: 0;
   }
 
   .feedback__controls-btn {
     border: none;
-    width: 85px;
+    width: 97px;
+  }
+
+  .feedback__controls-btn--next {
+    &::before {
+      left: 28px;
+    }
+
+    &::after {
+      right: 22px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .feedback__container {
-    margin-top: 0;
-    padding-top: 68px;
+    margin-top: 4px;
+    padding-top: 70px;
     padding-left: 220px;
     padding-bottom: 100px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-position: 50px;
+    background-position: 50px 0;
+    background-size: 30.5%;
   }
 
   .feedback__title {
     @include font-set(53px, 57px, bold, $black);
     margin-bottom: 32px;
+    margin-left: 0;
   }
 
   .feedback__photo {
@@ -151,6 +192,7 @@
 
   .feedback__wrapper {
     margin-left: 5px;
+    margin-right: 75px;
   }
 
   .feedback__text {
@@ -158,10 +200,22 @@
   }
 
   .feedback__controls {
-    bottom: 96px;
+    bottom: 120px;
   }
 
   .feedback__button {
     margin-top: 10px;
+  }
+
+  .feedback__author-name {
+    display: block;
+    font-size: 17px;
+  }
+
+  .feedback__controls-btn:hover {
+    &::before,
+    &::after {
+      opacity: 0.6;
+    }
   }
 }

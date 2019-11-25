@@ -1,0 +1,31 @@
+.socials {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials__item {
+  width: 62px;
+  height: 46px;
+}
+
+.socials__link {
+  display: block;
+  padding: 12px 20px;
+}
+
+.socials__item svg {
+  fill: #231f20;
+}
+
+@media (min-width: $desktop-width) {
+  .socials__item:hover svg,
+  .socials__item:focus svg {
+    fill: $primary-color;
+  }
+
+  .socials__item:active svg {
+    fill-opacity: 0.3;
+  }
+}

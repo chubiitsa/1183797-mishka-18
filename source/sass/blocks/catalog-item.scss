@@ -1,19 +1,33 @@
 .catalog-item__info {
-  padding: 26px;
+  padding: 25px 27px 27px;
   border: 1px solid $border-color;
   background-color: white;
 }
 
+.catalog-item__photo {
+  display: block;
+  width: 260px;
+  height: auto;
+}
+
 .catalog-item__content {
-  padding-bottom: 16px;
+  padding-bottom: 20px;
 }
 
 .catalog-item__name {
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .catalog-item__link {
   @include font-set($font-size, 20px, bold, $black);
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-item__description {
@@ -21,27 +35,33 @@
   margin: 0;
 }
 
-.catalog-item__price {
-  font-size: 15px;
-  font-weight: bold;
-}
-
 .catalog-item__buy {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 100px;
+  height: 47px;
+  padding-left: 75px;
+  padding-top: 22px;
 }
 
 .catalog-item__footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-end;
   border-top: $border;
-  padding-top: 21px;
 }
 
-.catalog-item__photo {
-  display: block;
+.catalog-item__buy:active .catalog-item__icon {
+  fill: $primary-color;
+  fill-opacity: 0.3;
+}
+
+.catalog-item__buy:focus .catalog-item__icon {
+  fill: $primary-color;
+}
+
+.catalog-item:focus .catalog-item__info {
+  @include shadow;
 }
 
 @media (min-width: $tablet-width) {
@@ -61,13 +81,20 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .catalog-item__info {
     flex-grow: 1;
-    min-width: 50%;
+    max-width: 50%;
+  }
+
+  .catalog-item__description {
+    font-size: 15px;
+  }
+
+  .catalog-item__price {
+    font-size: 17px;
+  }
+
+  .catalog-item__link {
+    font-size: 20px;
   }
 }
 
@@ -78,20 +105,34 @@
     width: 315px;
   }
 
-  .catalog-item__name {
-    margin-bottom: 5px;
-  }
-
   .catalog-item__photo {
     width: 315px;
     height: 460px;
   }
 
-  .catalog-item__link {
-    font-size: 20px;
+  .catalog-item__content {
+    padding-bottom: 16px;
   }
 
-  .catalog-item__description {
-    font-size: 15px;
+  .catalog-item__info {
+    max-width: 100%;
+  }
+
+  .catalog-item__name {
+    margin-bottom: 5px;
+  }
+
+  .catalog-item__buy:hover .catalog-item__icon {
+    fill: $primary-color;
+  }
+
+  .catalog-item__link {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .catalog-item:hover .catalog-item__info {
+    @include shadow;
   }
 }
