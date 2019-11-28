@@ -3,13 +3,13 @@
 }
 
 .special-offer__header {
-  margin-top: 25px;
-  margin-bottom: 20px;
+  margin-top: 27px;
+  margin-bottom: 21px;
 }
 
 .special-offer__title {
   @include big-title;
-  margin: 0 0 5px;
+  margin: 0 0 3px;
 }
 
 .special-offer__name {
@@ -18,9 +18,13 @@
   text-transform: uppercase;
 }
 
+.special-offer__info {
+  padding-bottom: 26px;
+}
+
 .special-offer__description {
   @include font-set(15px, 24px);
-  margin: 3px 0 26px;
+  margin: 0 0 17px;
   width: 100%;
   min-width: 260px;
   max-width: $tablet-width;
@@ -28,20 +32,20 @@
 
 .special-offer__properties {
   @include font-set(15px, 20px);
-  margin: 0 0 30px;
   border-collapse: collapse;
   width: 100%;
 }
 
 .special-offer__photo {
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 24px;
 }
 
 .special-offer__price {
   width: 100%;
   min-width: 260px;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   text-align: center;
 }
 
@@ -52,6 +56,7 @@
 
 .special-offer__key {
   display: block;
+  width: 100%;
   padding: 10px 0;
   border-bottom: $border;
 }
@@ -62,8 +67,8 @@
 
 @media (min-width: $tablet-width) {
   .special-offer__container {
-    margin-top: 55px;
-    padding-bottom: 80px;
+    margin-top: 45px;
+    padding-bottom: 53px;
     position: relative;
   }
 
@@ -73,10 +78,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 31px;
+    margin-bottom: 21px;
   }
 
   .special-offer__title {
     @include font-set(43px, 50px, bold, $black);
+    margin-left: -3px;
   }
 
   .special-offer__name {
@@ -87,7 +95,7 @@
   }
 
   .special-offer__info {
-    margin-top: 45px;
+    margin-top: 46px;
     padding-right: 56.5%;
   }
 
@@ -96,8 +104,12 @@
     margin: 0 0 35px;
   }
 
+  .special-offer__key {
+    width: 100%;
+  }
+
   .special-offer__footer {
-    margin-top: 55px;
+    margin-top: 30px;
     padding-right: 56.5%;
   }
 
@@ -119,13 +131,14 @@
 
 @media (min-width: $desktop-width) {
   .special-offer__container {
-    margin-top: 74px;
+    margin-top: 40px;
+    padding-bottom: 76px;
   }
 
   .special-offer__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
-    padding: 60px 0 0 0;
+    padding: 84px 0 0 0;
   }
 
   .special-offer__name {
@@ -143,18 +156,19 @@
 
   .special-offer__footer {
     margin-left: 175px;
-    margin-top: 110px;
+    margin-top: 84px;
     padding-right: 55.5%;
   }
 
   .special-offer__title {
     @include font-set(53px, 57px, bold, $black);
+    margin-left: 0;
   }
 
   .special-offer__photo {
     width: 525px;
     height: 636px;
-    top: 8px;
+    top: 32px;
     z-index: -1;
   }
 }

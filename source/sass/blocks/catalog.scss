@@ -1,3 +1,15 @@
 .catalog__container {
   margin-top: 30px;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog__container {
+    margin-top: 65px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    margin-top: 110px;
+  }
+}

@@ -3,13 +3,12 @@
 }
 
 .catalog-list__item {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 @media (min-width: $tablet-width) {
   .catalog-list__item {
-    display: flex;
-    flex-wrap: wrap;
+    margin-bottom: 53px;
   }
 }
 
@@ -20,8 +19,11 @@
   }
 
   .catalog-list__item {
+    display: flex;
+    flex-wrap: wrap;
     margin-left: 0;
-    margin-right: 50px;
+    margin-right: 51px;
+    margin-bottom: 57px;
     width: 315px;
   }
 

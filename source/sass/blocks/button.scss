@@ -8,4 +8,14 @@
   background-color: transparent;
   text-align: center;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-grey;
+    color: $white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
