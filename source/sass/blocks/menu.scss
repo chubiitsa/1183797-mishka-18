@@ -162,6 +162,10 @@
     display: none;
   }
 
+  .menu__link--search {
+    padding-bottom: 54px;
+  }
+
   .menu__item {
     border: none;
   }
@@ -217,8 +221,8 @@
   }
 
   .menu__icon--search {
-    top: 60%;
-    left: 41%;
+    top: 36px;
+    left: 30px;
     width: 18px;
     height: 18px;
   }

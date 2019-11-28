@@ -52,7 +52,7 @@
     height: 37px;
     position: absolute;
     bottom: -20px;
-    left: 12px;
+    left: 0;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat;
     background-size: 1250px;
@@ -82,25 +82,16 @@
     width: 30%;
   }
 
-  .categories__item {
-    &:hover,
-    &:focus {
-      transform: translateY(-5px);
-    }
+  .categories__item:hover {
+    transform: translateY(-5px);
   }
 
-  .categories__item--left {
-    &:hover,
-    &:focus {
-      box-shadow: 0 5px 0 $primary-color;
-    }
+  .categories__item--left:hover {
+    box-shadow: 0 5px 0 $primary-color;
   }
 
-  .categories__item--right {
-    &:hover,
-    &:focus {
-      box-shadow: 0 5px 0 $secondary-color;
-    }
+  .categories__item--right:hover {
+    box-shadow: 0 5px 0 $secondary-color;
   }
 
   .categories__item:hover .categories__icon {

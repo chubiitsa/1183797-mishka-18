@@ -55,15 +55,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .features {
+  .features__container {
+    padding-top: 28px;
     position: relative;
   }
 
-  .features__container {
-    padding-top: 28px;
-  }
-
-  .features::before {
+  .features__container::before {
     content: "";
     width: 100%;
     height: 15px;
@@ -111,13 +108,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .features::before {
+  .features__container::before {
     height: 25px;
     background-size: 1250px;
   }
 
   .features__container {
-    padding: 43px 225px 30px;
+    padding: 46px 225px 30px;
   }
 
   .features__title {

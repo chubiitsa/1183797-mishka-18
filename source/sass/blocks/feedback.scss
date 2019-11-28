@@ -65,16 +65,22 @@
 }
 
 .feedback__controls-btn:focus {
-  &::before,
+  &::before {
+    background-color: #666666;
+  }
+
   &::after {
-    opacity: 0.6;
+    border-color: #666666;
   }
 }
 
 .feedback__controls-btn:active {
-  &::before,
+  &::before {
+    background-color: #b2b2b2;
+  }
+
   &::after {
-    opacity: 0.3;
+    border-color: #b2b2b2;
   }
 }
 
@@ -102,7 +108,7 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
@@ -213,9 +219,12 @@
   }
 
   .feedback__controls-btn:hover {
-    &::before,
+    &::before {
+      background-color: #666666;
+    }
+
     &::after {
-      opacity: 0.6;
+      border-color: #666666;
     }
   }
 }
