@@ -112,6 +112,10 @@
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .feedback__photo {

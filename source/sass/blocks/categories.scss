@@ -55,7 +55,7 @@
     left: 0;
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat;
-    background-size: 1250px;
+    background-size: 768px;
     background-position-x: center;
   }
 
@@ -78,6 +78,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .categories::after {
+    background-size: 1150px;
+  }
+
   .categories__text {
     width: 30%;
   }
