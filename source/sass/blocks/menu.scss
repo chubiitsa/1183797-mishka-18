@@ -98,8 +98,8 @@
 
 .menu__icon {
   position: absolute;
-  top: 40%;
-  left: 12%;
+  top: 32px;
+  left: 32px;
   width: 20px;
   height: 20px;
   fill: #cccccc;
@@ -155,11 +155,16 @@
     display: block;
     width: 113px;
     height: 46px;
+    margin-left: -2px;
   }
 
   .menu__toggle,
   .menu__link--hidden {
     display: none;
+  }
+
+  .menu__link--search {
+    padding-bottom: 54px;
   }
 
   .menu__item {
@@ -217,8 +222,8 @@
   }
 
   .menu__icon--search {
-    top: 60%;
-    left: 41%;
+    top: 36px;
+    left: 32px;
     width: 18px;
     height: 18px;
   }
@@ -230,10 +235,9 @@
   }
 
   .menu__logo {
-    display: block;
-    width: 153px;
-    height: 72px;
-    margin: 0 auto;
+    width: 148px;
+    height: 73px;
+    margin-left: 65px;
   }
 
   .menu__logo[href] {

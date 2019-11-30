@@ -1,4 +1,20 @@
 .page-description {
   @include font-set(13px, 24px);
-  padding: 20px 0;
+  @include wrapper;
+  margin: 22px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-description {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 58px 0 8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-description {
+    margin: 104px auto 8px;
+    width: 70%;
+  }
 }

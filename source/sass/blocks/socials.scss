@@ -15,17 +15,17 @@
   padding: 12px 20px;
 }
 
-.socials__item svg {
+.socials__link svg {
   fill: #231f20;
 }
 
 @media (min-width: $desktop-width) {
-  .socials__item:hover svg,
-  .socials__item:focus svg {
+  .socials__link:hover svg,
+  .socials__link:focus svg {
     fill: $primary-color;
   }
 
-  .socials__item:active svg {
+  .socials__link:active svg {
     fill-opacity: 0.3;
   }
 }

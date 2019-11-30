@@ -13,6 +13,7 @@
   &:focus {
     background-color: $dark-grey;
     color: $white;
+    outline: none;
   }
 
   &:active {

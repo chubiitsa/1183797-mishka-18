@@ -1,45 +1,146 @@
 .order-form {
-  padding: 0 30px;
+  margin-bottom: 43px;
+}
+
+.order-form__container {
+  @include wrapper;
 }
 
 .order-form__fieldset {
-  display: flex;
-  flex-wrap: wrap;
   border: none;
-  margin: 15px 0;
+  margin: 10px 0 0 0;
   padding: 0;
+}
+
+.order-form__fieldset:first-child {
+  margin-bottom: 25px;
 }
 
 .order-form__legend {
   @include font-set(17px, 18px, bold, $primary-color);
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
+  padding-right: 0;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--phone,
+  &--email {
+    margin-bottom: 10px;
+  }
+}
+
+.order-form__legend::after {
+  content: "";
+  height: 1px;
+  width: 50px;
+  flex-grow: 1;
+  margin-left: 20px;
+  background-color: $primary-color;
 }
 
 .order-form__label {
-  @include font-set(15px, 18px, bold);
+  @include font-set(17px, 18px, bold);
+  position: relative;
+  padding-left: 62px;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  display: flex;
+  cursor: pointer;
+
+  &--text {
+    padding-left: 0;
+    padding-bottom: 2px;
+    padding-top: 4px;
+  }
+}
+
+.order-form__label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  content: "";
+}
+
+.order-form__label--circle::before {
+  border-radius: 50%;
+  border: 3px solid $dark-grey;
+}
+
+.order-form__label--square::before {
+  border: 3px solid $dark-grey;
+  padding-bottom: 20px;
+}
+
+.order-form__label:hover::before,
+.order-form__radio:checked + .order-form__label::before {
+  border-color: $primary-color;
+}
+
+.order-form__label--circle::after {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 15px;
+  height: 15px;
+  content: "";
+  background-color: $primary-color;
+  border-radius: 50%;
+  display: none;
+}
+
+.order-form__radio:checked + .order-form__label--circle::after,
+.order-form__check:checked + .order-form__label--square::after {
+  display: block;
+}
+
+.order-form__label--square::after {
+  position: absolute;
+  top: 12px;
+  left: 9px;
+  width: 22px;
+  height: 10px;
+  content: "";
+  border-bottom: 2px solid $black;
+  border-left: 2px solid $black;
+  transform: rotate(-45deg);
+  display: none;
+}
+
+.order-form__label--square {
+  padding-bottom: 33px;
 }
 
 .order-form__input {
-  @include font-set(15px, 18px);
+  @include font-set(17px, 18px);
   width: 100%;
-  height: 50px;
+  height: 48px;
   border: none;
   border-bottom: 2px solid $black;
   margin-bottom: 20px;
+  padding: 14px 40px 14px 0;
 
   &::placeholder {
     opacity: 0.3;
   }
 }
 
+.order-form__wrapper {
+  position: relative;
+}
+
 .order-form__textarea {
-  @include font-set(15px, 18px);
+  @include font-set(17px, 18px);
   font-family: $font-primary;
   width: 100%;
-  height: 140px;
+  height: 142px;
   border: 2px solid $black;
   padding: 15px;
+  margin-bottom: 12px;
 
   &::placeholder {
     opacity: 0.3;
@@ -47,10 +148,217 @@
 }
 
 .order-form__footer {
-  @include font-set(14px, 16px, normal, $black);
+  @include font-set(16px, 16px, normal, $black);
 }
 
 .order-form__button {
-  margin: 25px 0;
+  margin: 32px 0;
   width: 100%;
+}
+
+.order-form__icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  right: 5px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__container {
+    padding-top: 48px;
+    padding-bottom: 24px;
+    display: flex;
+
+    &--phone {
+      padding-bottom: 0;
+    }
+
+    &--email {
+      padding-bottom: 29px;
+      padding-top: 0;
+    }
+  }
+
+  .order-form__fieldset--grey {
+    background-color: $bg-color;
+  }
+
+  .order-form__fieldset:first-child {
+    margin-bottom: 4px;
+  }
+
+  .order-form__fieldset {
+    margin: 0;
+  }
+
+  .order-form__legend::after {
+    display: none;
+  }
+
+  .order-form__legend {
+    width: 33%;
+    align-items: flex-start;
+    margin-top: 17px;
+    margin-bottom: 0;
+  }
+
+  .order-form__label {
+    font-size: 19px;
+    line-height: 18px;
+    padding-left: 86px;
+    padding-bottom: 42px;
+    padding-top: 16px;
+
+    &::before {
+      width: 53px;
+      height: 53px;
+    }
+
+    &--text {
+      margin-right: 25px;
+      margin-bottom: 10px;
+      padding-left: 0;
+      padding-top: 19px;
+      padding-bottom: 0;
+    }
+  }
+
+  .order-form__input {
+    margin-top: 9px;
+    margin-bottom: 20px;
+    padding: 5px 19px;
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .order-form__input[type="tel"],
+  .order-form__input[type="email"] {
+    background-color: $bg-color;
+  }
+
+  .order-form__input--text {
+    width: 370px;
+    flex-grow: 1;
+    padding: 5px 19px;
+  }
+
+  .order-form__wrapper::before {
+    top: 14px;
+    right: 23px;
+  }
+
+  .order-form__label--square {
+    padding-left: 81px;
+    width: 50%;
+  }
+
+  .order-form__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .order-form__footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .order-form__footer small {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .order-form__button {
+    width: 230px;
+    order: -1;
+    margin-top: 17px;
+    margin-bottom: 7px;
+    margin-right: auto;
+  }
+
+  .order-form__label--circle::after {
+    top: 16px;
+    left: 16px;
+    width: 21px;
+    height: 21px;
+  }
+
+  .order-form__label--square::after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 30px;
+    height: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-form__container {
+    padding-right: 225px;
+  }
+
+  .order-form__wrapper {
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .order-form__legend {
+    width: 20%;
+    justify-content: center;
+    margin-top: 17px;
+    margin-bottom: auto;
+  }
+
+  .order-form__label {
+    &--circle {
+      width: 70%;
+    }
+
+    &--square {
+      width: 30%;
+    }
+  }
+
+  .order-form__input--text {
+    width: 550px;
+  }
+
+  .order-form__input[type="tel"],
+  .order-form__input[type="email"] {
+    width: 700px;
+  }
+
+  .order-form__button {
+    margin-left: 175px;
+    margin-top: 14px;
+  }
+
+  .order-form__footer small {
+    margin-right: 175px;
+  }
+
+  .order-form__textarea {
+    width: 80%;
+  }
+
+  .order-form__wrapper::before {
+    right: 5px;
+  }
+
+  .order-form__input:hover,
+  .order-form__input:focus {
+    border-bottom-color: $primary-color;
+    outline: none;
+  }
+
+  .order-form__textarea:hover,
+  .order-form__textarea:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
 }
