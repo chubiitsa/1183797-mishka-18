@@ -41,6 +41,7 @@
   height: 47px;
   padding-left: 75px;
   padding-top: 22px;
+  fill: #cccccc;
 }
 
 .catalog-item__footer {
@@ -51,12 +52,12 @@
   border-top: $border;
 }
 
-.catalog-item__buy:active .catalog-item__icon {
+.catalog-item__buy:active {
   fill: $primary-color;
   fill-opacity: 0.3;
 }
 
-.catalog-item__buy:focus .catalog-item__icon {
+.catalog-item__buy:focus {
   fill: $primary-color;
 }
 
@@ -122,7 +123,7 @@
     margin-bottom: 5px;
   }
 
-  .catalog-item__buy:hover .catalog-item__icon {
+  .catalog-item__buy:hover {
     fill: $primary-color;
   }
 

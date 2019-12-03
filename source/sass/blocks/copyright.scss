@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 16px 0 0;
-  padding: 21px;
+  padding: 22px 0;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -17,6 +17,7 @@
 
 .copyright__text {
   display: inline-block;
+  margin-bottom: 6px;
 }
 
 .copyright__logo {
@@ -25,7 +26,7 @@
   fill: $primary-color;
 }
 
-.copyright__link:focus .copyright__logo {
+.copyright__link:focus {
   fill: $secondary-color;
 }
 
@@ -42,7 +43,7 @@
 }
 
 @media ($desktop-width) {
-  .copyright__link:hover .copyright__logo {
+  .copyright__link:hover {
     fill: $secondary-color;
   }
 }

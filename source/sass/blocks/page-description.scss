@@ -9,12 +9,13 @@
     font-size: 17px;
     line-height: 30px;
     margin: 58px 0 8px;
+    width: 95%;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-description {
     margin: 104px auto 8px;
-    width: 70%;
+    width: 800px;
   }
 }
