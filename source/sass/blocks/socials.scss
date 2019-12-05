@@ -13,6 +13,14 @@
 .socials__link {
   display: block;
   padding: 12px 20px;
+
+  &--fb {
+    padding: 7px 21px;
+  }
+
+  &--tw {
+    padding: 12px 13px;
+  }
 }
 
 .socials__link svg {

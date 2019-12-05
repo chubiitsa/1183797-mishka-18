@@ -77,6 +77,7 @@
 }
 
 .order-form__label:hover::before,
+.order-form__label:focus::before,
 .order-form__radio:checked + .order-form__label::before {
   border-color: $primary-color;
 }
@@ -96,6 +97,21 @@
 .order-form__radio:checked + .order-form__label--circle::after,
 .order-form__check:checked + .order-form__label--square::after {
   display: block;
+}
+
+.order-form__check:focus + label::before,
+.order-form__check:focus + label::after {
+  border-color: $primary-color;
+}
+
+.order-form__radio:focus + label::before,
+.order-form__radio:focus + label::after {
+  border-color: $primary-color;
+  transform: scale(1.1);
+}
+
+.order-form__check:active + label::before {
+  border-color: #cccccc;
 }
 
 .order-form__label--square::after {
@@ -160,8 +176,8 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 5px;
-  right: 5px;
+  top: 13px;
+  right: 24px;
   background-repeat: no-repeat;
   background-size: contain;
   opacity: 0.2;
@@ -212,6 +228,7 @@
     padding-left: 86px;
     padding-bottom: 42px;
     padding-top: 16px;
+    padding-right: 20px;
 
     &::before {
       width: 53px;
@@ -224,6 +241,7 @@
       padding-left: 0;
       padding-top: 19px;
       padding-bottom: 0;
+      padding-right: 0;
     }
   }
 
@@ -315,13 +333,20 @@
   }
 
   .order-form__label {
+    padding-left: 80px;
+
     &--circle {
       width: 70%;
     }
 
     &--square {
       width: 30%;
+      margin-right: -34px;
     }
+  }
+
+  .order-form__label--text {
+    padding-left: 0;
   }
 
   .order-form__input--text {
@@ -356,9 +381,22 @@
     outline: none;
   }
 
+  .order-form__input[type="tel"]:hover ~ .order-form__icon,
+  .order-form__input[type="email"]:hover ~ .order-form__icon,
+  .order-form__input[type="tel"]:focus ~ .order-form__icon,
+  .order-form__input[type="email"]:focus ~ .order-form__icon {
+    fill: $primary-color;
+    opacity: 1;
+  }
+
   .order-form__textarea:hover,
   .order-form__textarea:focus {
     border-color: $primary-color;
     outline: none;
+  }
+
+  .order-form__icon {
+    top: 10px;
+    right: 5px;
   }
 }
