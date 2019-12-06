@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Вязание на заказ</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensans.woff2">
+  <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensansbold.woff2">
+  <link rel="stylesheet" href="css/style.min.css">
   <script>
       document.createElement("picture");
   </script>
@@ -40,7 +42,7 @@
       </li>
       <li class="menu__item menu__item--cart">
         <a href="" class="menu__link menu__link--cart">
-          <svg class="menu__icon" width="20.294px" height="18.849px">
+          <svg class="menu__icon" width="20px" height="19px">
             <use xlink:href="img/sprite.svg#cart"></use>
           </svg>
           Корзина: пока пуста
@@ -111,7 +113,7 @@
         <legend class="order-form__legend order-form__legend--phone">Тел</legend>
         <div class="order-form__wrapper order-form__input-wrapper--phone">
           <input class="order-form__input" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*" required>
-          <svg class="order-form__icon" width="24.829px" height="24.333px">
+          <svg class="order-form__icon" width="25px" height="24px">
             <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
         </div>
@@ -144,47 +146,46 @@
 <footer class="page-footer">
   <div class="page-footer__container container">
     <a href="index.html" class="page-footer__link">
-      <svg class="page-footer__logo" width="101.615px" height="34.056px">
-        <use xlink:href="img/sprite.svg#page-footer-logo"></use>
+      <svg class="page-footer__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
+        <use xlink:href="img/sprite.svg#s-logo-footer"></use>
       </svg>
     </a>
     <ul class="page-footer__socials socials">
       <li class="socials__item socials__item--insta">
         <a class="socials__link" href="" aria-label="Мишка в Инстаграме">
-          <svg width="21.769px" height="21.334px">
-            <use xlink:href="img/sprite.svg#insta"></use>
+          <svg width="22px" height="21px">
+            <use xlink:href="img/sprite.svg#s-icon-insta"></use>
           </svg>
         </a>
       </li>
       <li class="socials__item socials__item--fb">
         <a class="socials__link" href="" aria-label="Мишка на Фэйсбуке">
-          <svg width="14.962px" height="27.718px">
-            <use xlink:href="img/sprite.svg#fb"></use>
+          <svg width="15px" height="28px">
+            <use xlink:href="img/sprite.svg#s-icon-fb"></use>
           </svg>
         </a>
       </li>
       <li class="socials__item socials__item--tw">
         <a class="socials__link" href="" aria-label="Мишка в Твиттере">
-          <svg width="23.494px" height="20.168px">
-            <use xlink:href="img/sprite.svg#twitter"></use>
+          <svg width="24px" height="20px">
+            <use xlink:href="img/sprite.svg#s-icon-twitter"></use>
           </svg>
         </a>
       </li>
     </ul>
     <p class="page-footer__copyright copyright">
       <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link" aria-label="Перейти на сайт HTML-академии">
-        <span class="copyright__text">Разработано</span>
-        <svg class="copyright__logo" width="26.943px" height="34.09px">
-          <use xlink:href="img/sprite.svg#html-academy-logo"></use>
+        Разработано
+        <svg class="copyright__logo" width="27px" height="34px">
+          <use xlink:href="img/sprite.svg#s-logo-htmlacademy"></use>
         </svg>
       </a>
     </p>
   </div>
 </footer>
 
-<script src="js/svg4everybody.js"></script>
-<script>svg4everybody();</script>
 
+<script src="js/svg4everybody.js"></script>
 <script src="js/script.js"></script>
 
 </body>
