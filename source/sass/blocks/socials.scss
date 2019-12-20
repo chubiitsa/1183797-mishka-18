@@ -13,6 +13,7 @@
 .socials__link {
   display: block;
   padding: 12px 20px;
+  fill: #231f20;
 
   &--fb {
     padding: 7px 21px;
@@ -21,10 +22,6 @@
   &--tw {
     padding: 12px 13px;
   }
-}
-
-.socials__link svg {
-  fill: #231f20;
 }
 
 @media (min-width: $desktop-width) {
