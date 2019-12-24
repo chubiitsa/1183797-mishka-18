@@ -18,6 +18,10 @@
   margin: 0 0 5px;
 }
 
+.catalog-item__price {
+  font-size: 16px;
+}
+
 .catalog-item__link {
   @include font-set($font-size, 20px, bold, $black);
 
@@ -37,8 +41,8 @@
 
 .catalog-item__buy {
   display: inline-block;
-  width: 50px;
-  height: 47px;
+  width: 45px;
+  height: 45px;
   padding-left: 25px;
   padding-top: 22px;
   fill: #cccccc;
@@ -96,6 +100,10 @@
 
   .catalog-item__link {
     font-size: 20px;
+  }
+
+  .catalog-item__buy {
+    width: 50px;
   }
 }
 

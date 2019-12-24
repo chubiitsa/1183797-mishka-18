@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интернет-магазин товаров для дома Мишка">
   <title>Интернет-магазин товаров для дома Мишка</title>
   <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensans.woff2">
   <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensansbold.woff2">
@@ -10,12 +11,12 @@
   <script>
       document.createElement("picture");
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 <header class="page-header">
   <nav class="page-header__menu menu menu--nojs">
-    <button class="menu__toggle" type="button">
+    <button class="menu__toggle" type="button" aria-label="Меню">
       <span class="menu__toggle-icon"></span>
     </button>
     <ul class="menu__list">
@@ -61,10 +62,11 @@
 
 <main>
   <section class="categories">
+    <h2 class="visually-hidden">Категории товаров</h2>
     <ul class="categories__list container">
       <li class="categories__item">
         <a href="" class="categories__link categories__link--left">
-          <span class="categories__text">Предметы интерьера</span>
+          <span class="categories__text categories__text--left">Предметы интерьера</span>
           <svg class="categories__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="62px" viewBox="-259.404 -19.675 40.219 62.411" enable-background="new -259.404 -19.675 40.219 62.411" xml:space="preserve">
             <path d="M-244.227,18.283c-0.286,0.966-0.245,2.191,0.027,3.639c0.494,2.635,1.687,6.041,2.358,9.67h5.062 c0.696-3.641,1.949-7.05,2.471-9.683c0.287-1.445,0.33-2.66,0.041-3.617c-0.275-0.899-0.89-1.618-2.021-2.303h-5.997 C-243.361,16.668-243.96,17.38-244.227,18.283z"/>
             <path d="M-232.395,38.278h-13.799c-1.293,0-2.299,0.976-2.299,2.229v2.229h2.299h13.799h2.299v-2.229 C-230.096,39.254-231.102,38.278-232.395,38.278z"/>
@@ -76,7 +78,7 @@
       </li>
       <li class="categories__item">
         <a href="" class="categories__link categories__link--right">
-          <span class="categories__text">Детские игрушки</span>
+          <span class="categories__text categories__text--right">Детские игрушки</span>
           <svg class="categories__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="60px" viewBox="226.001 226.19 60 59.62" enable-background="new 226.001 226.19 60 59.62" xml:space="preserve">
             <path d="M226.001,269.871l27.438,15.934v-23.346l-27.438-15.94V269.871z M277.347,238.627v2.453 c0,1.817-3.458,3.29-7.73,3.29c-4.266,0-7.727-1.473-7.727-3.29v-4.059h0.024c0.26,1.714,3.604,3.073,7.702,3.073 c4.272,0,7.729-1.474,7.729-3.285c0-1.819-3.457-3.289-7.729-3.289c-0.339,0-0.675,0.01-1.002,0.03l-4.975-2.888v3.086 c0,1.817-3.454,3.29-7.723,3.29c-2.683,0-5.045-0.583-6.433-1.467c-0.196-0.203-0.439-0.401-0.732-0.586 c-0.363-0.381-0.565-0.797-0.565-1.236v-2.986l-4.807,2.792c-0.347-0.017-0.696-0.033-1.054-0.033c-4.267,0-7.727,1.469-7.727,3.289 c0,1.811,3.46,3.285,7.727,3.285c4.099,0,7.446-1.358,7.705-3.073h0.022v4.059c0,1.817-3.455,3.29-7.727,3.29 c-4.267,0-7.727-1.473-7.727-3.29v-2.42l-5.952,3.452l27.531,15.986l27.351-15.882L277.347,238.627z M263.703,248.793 c0,1.817-3.46,3.287-7.727,3.287c-4.269,0-7.729-1.47-7.729-3.287v-4.059h0.024c0.26,1.715,3.603,3.076,7.705,3.076 c4.101,0,7.443-1.361,7.705-3.076h0.021V248.793L263.703,248.793z M258.558,262.666v23.144L286,269.871v-23.144L258.558,262.666z  M255.917,232.762c4.269,0,7.723-1.47,7.723-3.286c0-1.814-3.454-3.287-7.723-3.287c-4.27,0-7.729,1.472-7.729,3.287 C248.187,231.292,251.647,232.762,255.917,232.762"/>
           </svg>
@@ -129,7 +131,7 @@
     <div class="features__container container">
       <h2 class="features__title">Коротко о нас:</h2>
       <ul class="features__list">
-        <li class="features__item features__item--flower">Экологически чистые&nbspматериалы</li>
+        <li class="features__item features__item--flower">Экологически чистые&nbsp;материалы</li>
         <li class="features__item features__item--money">Скандинавский стиль по&nbsp;российской цене</li>
         <li class="features__item features__item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
         <li class="features__item features__item--ball">Связано вручную с любовью&nbsp;и&nbsp;умилением</li>
@@ -181,9 +183,9 @@
     <div class="contacts__map" id="yandex-map">
     </div>
     <picture>
-      <source media="(min-width: 1150px)" type="image/webp" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-      <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-      <source type="image/webp" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x">
+      <source media="(min-width: 1150px)" type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+      <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+      <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
       <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
       <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
       <img class="contacts__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg" width="322" height="457" alt="Карта проезда к адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
@@ -235,7 +237,7 @@
 
 <div class="modal__overlay"></div>
 <section class="modal">
-  <h1 class="modal__title">Добавить в корзину</h1>
+  <h2 class="modal__title">Добавить в корзину</h2>
   <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
     <fieldset class="modal__fieldset">
       <legend class="modal__legend">Выберите размер:</legend>
@@ -252,8 +254,8 @@
   </form>
 </section>
 
-<script src="https://api-maps.yandex.ru/2.1/?apikey=603dc511-8efe-43bf-8a28-9835de30ef82&lang=ru_RU" type="text/javascript"></script>
-<script src="js/svg4everybody.js"></script>
-<script src="js/script.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=603dc511-8efe-43bf-8a28-9835de30ef82&lang=ru_RU"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

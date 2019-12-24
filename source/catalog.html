@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интернет-магазин товаров для дома Мишка">
   <title>Каталог магазина Мишка</title>
   <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensans.woff2">
   <link rel="preload" as="font" crossorigin="anonymous" href="fonts/opensansbold.woff2">
@@ -10,22 +11,22 @@
   <script>
       document.createElement("picture");
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 
 <header class="page-header">
   <nav class="page-header__menu menu menu--nojs">
-    <button class="menu__toggle" type="button">
+    <button class="menu__toggle" type="button" aria-label="Меню">
       <span class="menu__toggle-icon"></span>
     </button>
     <ul class="menu__list">
       <li class="menu__item menu__item--logo">
-        <a href="index.html" class="menu__logo" aria-label="Перейти на главную страницу">
+        <a href="index.html" aria-label="Перейти на главную страницу">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+            <img class="menu__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
           </picture>
         </a>
       </li>
@@ -63,6 +64,7 @@
 
 <main>
   <section class="catalog">
+    <h2 class="visually-hidden">Каталог</h2>
     <div class="catalog__container container">
       <ul class="catalog__list catalog-list">
         <li class="catalog-list__item">
@@ -84,7 +86,7 @@
               </div>
               <div class="catalog-item__footer">
                 <b class="catalog-item__price">1 200 руб.</b>
-                <a href="" class="catalog-item__buy cart__button">
+                <a href="" class="catalog-item__buy cart__button" aria-label="Добавить в корзину">
                   <svg width="20px" height="19px">
                     <use xlink:href="img/sprite.svg#s-icon-cart"></use>
                   </svg>
@@ -101,7 +103,7 @@
                 <source media="(min-width: 768px)" type="image/webp" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
                 <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
-                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                 <img class="catalog-item__photo" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" width="265" height="195" alt="Корзинка для белья">
               </picture>
             </a>
@@ -112,7 +114,7 @@
               </div>
               <div class="catalog-item__footer">
                 <b class="catalog-item__price">690 руб.</b>
-                <a href="" class="catalog-item__buy cart__button">
+                <a href="" class="catalog-item__buy cart__button" aria-label="Добавить в корзину">
                   <svg width="20px" height="19px">
                     <use xlink:href="img/sprite.svg#s-icon-cart"></use>
                   </svg>
@@ -142,7 +144,7 @@
               </div>
               <div class="catalog-item__footer">
                 <b class="catalog-item__price">1 500 руб.</b>
-                <a href="" class="catalog-item__buy cart__button">
+                <a href="" class="catalog-item__buy cart__button" aria-label="Добавить в корзину">
                   <svg width="20px" height="19px">
                     <use xlink:href="img/sprite.svg#s-icon-cart"></use>
                   </svg>
@@ -181,7 +183,7 @@
 
 <footer class="page-footer">
   <div class="page-footer__container container">
-    <a href="index.html" class="page-footer__link">
+    <a href="index.html" class="page-footer__link" aria-label="Переход на главную страницу">
       <svg class="page-footer__logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
         <use xlink:href="img/sprite.svg#s-logo-footer"></use>
       </svg>
@@ -222,7 +224,7 @@
 
 <div class="modal__overlay"></div>
 <section class="modal">
-  <h1 class="modal__title">Добавить в корзину</h1>
+  <h2 class="modal__title">Добавить в корзину</h2>
   <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
     <fieldset class="modal__fieldset">
       <legend class="modal__legend">Выберите размер:</legend>
@@ -239,8 +241,8 @@
   </form>
 </section>
 
-<script src="js/svg4everybody.js"></script>
-<script src="js/script.js"></script>
+<script src="js/svg4everybody.min.js"></script>
+<script src="js/script.min.js"></script>
 
 </body>
 </html>
