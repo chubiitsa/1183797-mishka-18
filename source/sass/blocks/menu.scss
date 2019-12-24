@@ -179,10 +179,11 @@
   }
 
   .menu__item--logo {
-    min-width: 320px;
+    min-width: 48%;
     text-align: left;
     padding-bottom: 19px;
-    padding-top: 21px;
+    padding-top: 22px;
+    flex-grow: 1;
   }
 
   .menu__item--catalog {
@@ -192,7 +193,7 @@
   }
 
   .menu__item--cart {
-    width: 266px;
+    min-width: 30%;
     border-left: $border;
   }
 
@@ -203,7 +204,7 @@
   }
 
   .menu__item--search {
-    width: 82px;
+    width: 81px;
     border-left: $border;
   }
 
@@ -256,7 +257,11 @@
     order: -1;
     text-align: center;
     padding-bottom: 9px;
-    padding-top: 10px;
+    padding-top: 8px;
+  }
+
+  .menu__item--cart {
+    min-width: 20%;
   }
 
   .menu__item--catalog {
@@ -272,6 +277,10 @@
 
   .menu__item--search {
     border-left: $border;
+  }
+
+  .menu__icon--search {
+    left: 28px;
   }
 
   .menu__item--arrivals,
@@ -294,7 +303,7 @@
   .menu__link--arrivals,
   .menu__link--sale {
     @include font-set(15px, 24px, bold, $black);
-    padding-top: 15px;
+    padding-top: 17px;
   }
 
   .menu__link--sale {

@@ -103,19 +103,19 @@
 @media (min-width: $tablet-width) {
   .feedback__container {
     margin-top: 28px;
-    margin-bottom: 63px;
+    margin-bottom: 66px;
     padding-top: 79px;
     padding-bottom: 28px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    background-image: url("../img/review@1x.jpg");
+    background-image: url("../img/bg-review@1x.jpg");
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
+      background-image: url("../img/bg-review@2x.jpg");
     }
   }
 
@@ -129,7 +129,7 @@
 
   .feedback__title {
     @include font-set(43px, 50px, bold, $black);
-    margin: 0 0 30px -5px;
+    margin: 0 0 27px -5px;
     order: -2;
   }
 
@@ -181,7 +181,7 @@
 @media (min-width: $desktop-width) {
   .feedback__container {
     margin-top: 4px;
-    margin-bottom: 39px;
+    margin-bottom: 38px;
     padding-top: 70px;
     padding-left: 220px;
     padding-bottom: 100px;
@@ -217,6 +217,7 @@
 
   .feedback__button {
     margin-top: 10px;
+    margin-bottom: 27px;
   }
 
   .feedback__author-name {

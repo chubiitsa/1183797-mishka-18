@@ -16,42 +16,44 @@
   @include font-set($font-size, 20px, bold, $black);
   padding-top: 55px;
   padding-bottom: 28px;
+  padding-left: 5px;
+  margin-left: -5px;
   background-repeat: no-repeat;
 
   &--flower {
     background-image: url("../img/icon-feature-flower.svg");
     background-size: 33px;
-    background-position: 7px 0;
+    background-position: 12px 0;
   }
 
   &--money {
     background-image: url("../img/icon-feature-money.svg");
     background-size: 47px;
-    background-position: 0 2px;
+    background-position: 5px 2px;
   }
 
   &--heart {
     background-image: url("../img/icon-feature-heart.svg");
     background-size: 34px;
-    background-position: 7px 6px;
+    background-position: 12px 6px;
   }
 
   &--ball {
     background-image: url("../img/icon-feature-ball.svg");
     background-size: 36px;
-    background-position: 3px 3px;
+    background-position: 8px 3px;
   }
 
   &--rocket {
     background-image: url("../img/icon-feature-rocket.svg");
-    background-size: 60px;
-    background-position: -10px 3px;
+    background-size: 57px;
+    background-position: -2px 3px;
   }
 
   &--gift {
     background-image: url("../img/icon-feature-gift.svg");
     background-size: 34px;
-    background-position: 3px 2px;
+    background-position: 8px 2px;
   }
 }
 
@@ -92,7 +94,7 @@
 
   .features__item {
     @include font-set(20px, 22px, bold, $black);
-    width: 334px;
+    width: 338px;
     padding-bottom: 56px;
     padding-right: 20px;
 
@@ -110,6 +112,10 @@
 
     &--ball {
       order: -1;
+    }
+
+    &--rocket {
+      background-position: 0 3px;
     }
   }
 }
@@ -130,6 +136,6 @@
   }
 
   .features__item {
-    width: 348px;
+    width: 355px;
   }
 }
