@@ -74,7 +74,7 @@ gulp.task("sprite", function () {
     .pipe(imagemin([
       imagemin.svgo({
       plugins: [
-        {removeAttrs: {attrs:['fill']}}]
+        {removeAttrs: {attrs:["fill"]}}]
       })]))
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
@@ -104,10 +104,10 @@ gulp.task("html", function () {
 
 gulp.task("copyNodeModules", function () {
   return gulp.src([
-    "node_modules/picturefill/dist/picturefill.js",
-    "node_modules/svg4everybody/dist/svg4everybody.js"
+    "node_modules/picturefill/dist/picturefill.min.js",
+    "node_modules/svg4everybody/dist/svg4everybody.min.js"
   ])
-    .pipe(gulp.dest("source/js"))
+    .pipe(gulp.dest("build/js"))
 })
 
 gulp.task("js", function () {
