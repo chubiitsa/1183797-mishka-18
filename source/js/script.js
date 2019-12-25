@@ -1,12 +1,12 @@
-var navMain = document.querySelector('.menu');
-var navToggle = document.querySelector('.menu__toggle');
-var link = document.querySelector('.cart__button');
-var popup = document.querySelector('.modal');
-var overlay = document.querySelector('.modal__overlay');
+var navMain = document.querySelector(".menu");
+var navToggle = document.querySelector(".menu__toggle");
+var link = document.querySelector(".cart__button");
+var popup = document.querySelector(".modal");
+var overlay = document.querySelector(".modal__overlay");
 
-navMain.classList.remove('menu--nojs');
-navToggle.addEventListener('click', function () {
-  navMain.classList.toggle('menu--opened');
+navMain.classList.remove("menu--nojs");
+navToggle.addEventListener("click", function () {
+  navMain.classList.toggle("menu--opened");
 });
 
 function initPopup () {
@@ -18,11 +18,10 @@ function initPopup () {
     evt.preventDefault();
     popup.classList.add("modal--show");
     overlay.classList.add("modal__overlay--show");
-    console.log('Нажали на кнопку');
   });
 
   window.addEventListener("keydown", function (evt) {
-    if (evt.code === 'Escape') {
+    if (evt.code === "Escape") {
       if (popup.classList.contains("modal--show")) {
         evt.preventDefault();
         popup.classList.remove("modal--show");
@@ -35,15 +34,13 @@ function initPopup () {
     evt.preventDefault();
     popup.classList.remove("modal--show");
     overlay.classList.remove("modal__overlay--show");
-    console.log('Нажали на подложку');
-
   });
 }
 
 initPopup();
 
 function initYandexMap () {
-  if (!document.querySelector('.contacts__map')) {
+  if (!document.querySelector(".contacts__map")) {
     return
   }
 

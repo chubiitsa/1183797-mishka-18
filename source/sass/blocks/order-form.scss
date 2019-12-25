@@ -161,7 +161,7 @@
   height: 142px;
   border: 2px solid $black;
   padding: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
 
   &::placeholder {
     opacity: 0.3;
@@ -173,7 +173,7 @@
 }
 
 .order-form__button {
-  margin: 32px 0;
+  margin: 31px 0;
   width: 100%;
 }
 
@@ -208,12 +208,12 @@
     }
 
     &--personal {
-      padding-bottom: 30px;
+      padding-bottom: 33px;
     }
   }
 
   .order-form__fieldset:first-child {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
 
   .order-form__fieldset--grey {
@@ -299,6 +299,7 @@
 
   .order-form__textarea {
     font-size: 19px;
+    margin-bottom: 12px;
   }
 
   .order-form__wrapper {

@@ -7,14 +7,14 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const server = require("browser-sync").create();
-const csso = require('gulp-csso');
-const rename = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
-const webp = require('gulp-webp');
-const svgstore = require('gulp-svgstore');
-const del = require('del');
-const uglify = require('gulp-uglify');
-const htmlmin = require('gulp-htmlmin');
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const del = require("del");
+const uglify = require("gulp-uglify");
+const htmlmin = require("gulp-htmlmin");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -69,9 +69,9 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
-gulp.task("sprite", function (){
+gulp.task("sprite", function () {
   return gulp.src("source/img/**/s-{icon,logo}-*.svg")
-    .pipe(imagemin( [
+    .pipe(imagemin([
       imagemin.svgo({
       plugins: [
         {removeAttrs: {attrs:['fill']}}]
@@ -98,7 +98,7 @@ gulp.task("html", function () {
   ], {
     base: "source"
   })
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"))
 });
 
