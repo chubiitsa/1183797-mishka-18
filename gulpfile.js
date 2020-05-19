@@ -15,6 +15,8 @@ const svgstore = require("gulp-svgstore");
 const del = require("del");
 const uglify = require("gulp-uglify");
 const htmlmin = require("gulp-htmlmin");
+const ghPages = require('gh-pages');
+const path = require('path');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -126,6 +128,11 @@ gulp.task("js", function () {
 gulp.task("clean", function () {
   return del("build");
 });
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 gulp.task("build", gulp.series("clean", "images", "webp", "copy", gulp.parallel("css", "sprite", "html", gulp.series("copyNodeModules", "js"))));
 gulp.task("start", gulp.series("build", "server"));
