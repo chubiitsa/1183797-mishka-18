@@ -8,6 +8,7 @@
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
     "del": "^5.1.0",
+    "gh-pages": "^2.2.0",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^6.2.0",
@@ -27,7 +28,8 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp start"
+    "start": "gulp start",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
@@ -46,7 +48,12 @@
     "node": "8.16"
   },
   "dependencies": {
+    "acorn": "^7.2.0",
+    "deep-extend": "^0.6.0",
     "gulp-htmlmin": "^5.0.1",
+    "kind-of": "^6.0.3",
+    "merge": "^1.2.1",
+    "minimist": "^1.2.5",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
   }
