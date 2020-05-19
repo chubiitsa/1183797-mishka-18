@@ -1,5 +1,4 @@
 # Личный проект «Мишка» от [HTML Academy](https://htmlacademy.ru).
-[![Build status][travis-image]][travis-url] 
 
 Выполнила: [Анна Казакова](https://up.htmlacademy.ru/adaptive/18/user/1183797).
 
