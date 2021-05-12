@@ -52,7 +52,7 @@
     "deep-extend": "^0.6.0",
     "gulp-htmlmin": "^5.0.1",
     "kind-of": "^6.0.3",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "minimist": "^1.2.5",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
